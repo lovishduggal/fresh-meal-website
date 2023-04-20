@@ -1,0 +1,104 @@
+/** Reset */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/** Colors variables */
+:root{
+    --primary: #eebf00;
+    --secondary: #232b38;
+    --ternary:#6c6c6c;
+    --danger: #fe4545;
+    --pure: #fefefe;
+    --light: #f0f0f0;
+    --heaven: #ffffff;
+    --footer: #2d333f;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+
+.container{
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/** media screen  */
+@media (min-width:576px)
+{
+    .container{
+        max-width: 540px;
+    }
+}
+@media (min-width:768px)
+{
+    .container{
+        max-width: 720px;
+    }
+}
+@media (min-width:992px)
+{
+    .container{
+        max-width: 960px;
+    }
+}
+@media (min-width:1200px)
+{
+    .container{
+        max-width: 1152px;
+    }
+}
+
+header.topbar{
+    background-color: var(--secondary);
+    color: var(--pure);
+    font-weight: 600;
+    padding: 0.75rem 0;
+}
+header.topbar i, header.topbar .auth > div a{
+    color: var(--pure);
+    text-decoration: none;
+}
+header.topbar .icons a {
+    margin-right: 0.6rem;
+}
+header.topbar .auth .divider{
+    display: inline-block;
+    padding: 0 1rem;
+}
+header.topbar .auth > div i {
+    display: inline-block;
+    margin-right: 0.35rem;
+}
+
+.flex{
+    display: flex;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.items-center{
+    align-items: center;
+}
+
+nav .top{
+    padding: 1.5rem 0;
+}
+nav .top .contact h5, nav .top .time h5 {
+    font-weight: 900;
+    margin-bottom: 0.25rem;
+}
+nav .top .contact h6 , nav .top .time h6 {
+    font-weight: 500;
+    letter-spacing: 0.055rem;
+    font-size: 0.75rem;
+    color: var(--ternary);
+}
+nav .top .contact img, nav .top .time img {
+    margin-right: 1rem;
+}
