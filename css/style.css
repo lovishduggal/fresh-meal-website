@@ -144,7 +144,7 @@ nav .navbar a:hover{
 .magic-shadow-sm::after{
     content: '';
     display: block;
-    width: 100%;
+    width: 90%;
     height: 69px;
     background-image: url(../icons/shadow-sm.svg);
     background-repeat: no-repeat;
@@ -152,6 +152,8 @@ nav .navbar a:hover{
     background-position: center;
     bottom: -20px;
     z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
 }
 header.hero{
     height: 600px;
@@ -231,7 +233,7 @@ section.top-products{
     font-weight: 700;
     text-align: center;
     position: relative;
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
 }
 .section-heading::after{
     content: '';
@@ -335,6 +337,65 @@ section.top-products .food-slider .food-card button img {
 .top-products .btn-wrapper{
     margin-top: 2rem;
 }
+
 .slick-track{
     padding: 1rem 0;
+}
+
+section.about-meal img {ś
+    width: 85%;
+}
+.flex-1{
+    flex: 1;
+}
+section.about-meal h2{
+    font-weight: 700;
+    font-weight: 1.4rem;
+    color: var(--secondary);
+    margin-bottom: 2rem;
+    line-height: 1.3;
+}
+section.about-meal h3{
+    font-weight: 1.4rem;
+    margin-bottom: 4rem;
+    line-height: 1.7;
+}
+
+section.our-services{
+    background-color: var(--light);
+    z-index: 0;
+    position: relative;
+}
+section.our-services .card-wrapper{
+    margin-top: 8rem;
+}
+section.our-services .service-card{
+    background-color: var(--heaven);
+    text-align: center;
+    padding: 2rem;
+    padding-top: 4rem;
+    position: relative;
+    border-radius: 4px;
+    margin-right: 2rem;
+}
+section.our-services .service-card:last-child{
+    margin-right: 0;
+}
+section.our-services .service-card .icon{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+section.our-services .service-card h2{
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+section.our-services .service-card p{
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+.text-primary{
+    color: var(--primary);
 }
