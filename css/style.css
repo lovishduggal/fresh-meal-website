@@ -21,7 +21,6 @@
 body{
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
-    height: 4000px;
 }
 
 .container{
@@ -55,7 +54,48 @@ body{
         max-width: 1152px;
     }
 }
-
+.main-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.nav-background{
+    width: 100%;
+    height: 100%;
+    background-color: var(--light);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    z-index: 1;
+}
+.nav-trigger{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 15px;
+    display: none;
+}
+.site-content-wrapper{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: var(--heaven);
+    z-index: 2;
+    transition: all 0.3s ease-in-out;
+}
+.site-content-wrapper.scaled{
+    transform: scale(0.9) translateX(90%);
+    border-radius: 3px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.site-content{
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+}
 header.topbar{
     background-color: var(--secondary);
     color: var(--pure);
@@ -161,6 +201,7 @@ header.hero{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    overflow: hidden;
 }
 header.hero .container{
     position: relative;
@@ -342,7 +383,7 @@ section.top-products .food-slider .food-card button img {
     padding: 1rem 0;
 }
 
-section.about-meal img {ś
+section.about-meal img {
     width: 85%;
 }
 .flex-1{
@@ -523,4 +564,232 @@ section.subscribe .input-wrap button{
 section.subscribe .input-wrap button:hover{
     color: var(--heaven);
     background-color: var(--secondary);
+}
+
+section.contact-us{
+    padding: 0;
+}
+section.contact-us .map{
+    filter:grayscale(100%) ;
+}
+section.contact-us .contact-info-wrapper{
+    padding: 4rem 0;
+}
+section.contact-us .contact-info > div > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+section.contact-us .contact-info > div > div img {
+    margin-right: 1rem;
+}
+section.contact-us .contact-info > div > div > div {
+    display: flex;
+    flex-direction: column;
+}
+section.contact-us .contact-info > div > div > div span:first-child{
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+footer{
+    background-color: var(--footer);
+    text-align: center;
+    padding: 4rem 0;
+}
+footer .container{
+    color: var(--pure);
+}
+footer .box{
+    flex: 1;
+    margin-right: 2rem;
+}
+footer .box:last-child{
+    margin-right: 0rem;
+}
+footer .instagram-api img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+footer .instagram-api .post-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+footer .instagram-api .post-wrapper > div{
+    width: calc(1 / 3 * 100% - (1 - 1 / 3) * 10px);
+}
+footer  .box ul{
+    list-style: none;
+}
+footer  .box ul li a {
+    color: var(--pure);
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+footer  .box ul li a:hover{
+    color: var(--primary);
+}
+footer  .box ul li{
+    margin-bottom: 1rem;
+}
+footer .box h3{
+    border-bottom:1px solid var(--primary) ;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+footer .box p{
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+footer .box:nth-child(3) > div{
+    display: flex;
+    justify-content:center;
+}
+footer .box:nth-child(3) > div ul {
+    text-align: left;
+}
+footer .box:nth-child(3) > div ul i{
+    margin-right: 0.5rem;
+}
+footer .box:nth-child(3) > div ul li{
+    margin-bottom: 1.5rem;
+}
+footer.copyright{
+    padding: 1rem 0;
+    background-color:var(--secondary);
+    color: var(--pure);
+    font-size: 0.75rem;
+}
+.nav-background .mobile-logo{
+    padding: 1rem;
+}
+.nav-background .mobile-nav ul{
+    list-style-type: none;
+}
+.nav-background .mobile-nav ul li {
+    margin-bottom: 1rem;
+}
+.nav-background .mobile-nav {
+    padding: 1rem;
+}
+.nav-background .mobile-nav ul li a{
+    text-decoration: none;
+    color: var(--secondary);
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+.nav-background .mobile-nav ul li a:hover{
+    color: var(--primary);
+}
+.nav-background .contact, .nav-background .time{
+    padding: 1rem;
+    padding-left: 0;
+}
+.nav-background .contact img , .nav-background .time img {
+    margin-right: 1rem;
+}
+.nav-background .contact h5, .nav-background .time h5{
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+}
+.nav-background .cart{
+    margin-bottom: 2rem;
+}
+.nav-background .cart a{
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 700;
+}
+.nav-background .cart img{
+    margin-right: 0.75rem;
+    width: 20px;
+    height: 20px;
+}
+@media (max-width:992px)
+{
+    .nav-trigger{
+        display: block;
+    }
+    header.topbar, nav{
+        display: none;
+    }
+    header.hero{
+        margin-top: -4rem;
+    }
+    header.hero .hero-image{
+        top: 80px;
+        right: -160px;
+    }
+    .top-products .slider-btn{
+        display: none!important;
+    }
+    .latest-news .article-wrapper{
+        flex-direction: column;
+    }
+    section.latest-news .article-wrapper .card{
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+    footer .instagram-api .post-wrapper > div{
+        width: calc(1 / 2 * 100% - (1 - 1 / 3) * 10px);
+    }
+
+}
+@media (max-width:768px)
+{
+    .about-meal-wrap{
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-meal-wrap div:first-child img{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    section.our-services .card-wrapper{
+        flex-direction: column;
+    }
+    section.our-services .card-wrapper > div {
+        margin-right: 0;
+        margin-bottom: 4rem;
+    }
+    section.our-services .card-wrapper > div:last-child{
+        margin-bottom: 0rem;
+    }
+    section.subscribe .container{
+        flex-direction: column;
+        text-align: center;
+    }
+    section.subscribe .container > div:first-child img {
+        width: 100%;
+    }
+    footer .container{
+        flex-direction: column;
+    }
+    footer .box {
+        margin-right: 0rem;
+        text-align: start;
+        margin-bottom: 3rem;
+    }
+    footer .box:nth-child(3) > div {
+        justify-content: flex-start;
+    }
+}
+@media (max-width:576px)
+{
+    header.hero .hero-image{
+        right: -220px;
+        top: 110px;
+    }
+    section.contact-us{
+        flex-direction: column;
+    }
+    section.big-deal .timer > div {
+        margin-right: 0.5rem;
+    }
+    section.big-deal .timer > div:last-child {
+        margin-right: 0rem;
+    }
 }
